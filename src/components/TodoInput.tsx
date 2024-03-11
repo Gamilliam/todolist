@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { TextInput, View, StyleSheet, TouchableOpacity } from "react-native";
+import { TextInput, View, StyleSheet, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 type TodoInputProps = {
@@ -25,9 +25,9 @@ export default function ToDoInput({ onAdd }: TodoInputProps) {
         maxLength={30}
         onSubmitEditing={handleAdd}
       />
-      <TouchableOpacity onPress={handleAdd}>
+      <Pressable onPress={handleAdd}>
         <Ionicons name="add-circle-outline" style={styles.btn} />
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 }
@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 2,
     borderRadius: 5,
-    borderColor: "purple",
+    borderColor: "teal",
     padding: 8,
     margin: 10,
-    width: 200,
+    width: 250,
   },
   btn: {
-    color: "purple",
+    color: "teal",
     fontSize: 50,
   },
 });

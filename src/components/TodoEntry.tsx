@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Pressable, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, Pressable } from "react-native";
 import Checkbox from "expo-checkbox";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Todo } from "../hooks/useTodos";
@@ -19,12 +19,12 @@ export default function TodoEntry({ todo, onDone, onRemove }: TodoProps) {
         style={todo.done && styles.doneOpacity}
       />
       <Text style={todo.done && styles.doneOpacity}>{todo.text}</Text>
-      <TouchableOpacity
+      <Pressable
         onPress={() => onRemove?.(todo)}
         style={todo.done && styles.doneOpacity}
       >
         <Ionicons name="remove-circle-outline" style={styles.btn} />
-      </TouchableOpacity>
+      </Pressable>
     </Pressable>
   );
 }
@@ -36,13 +36,15 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     alignItems: "center",
     flexDirection: "row",
+    borderBottomColor: "grey",
+    borderBottomWidth: 1,
   },
   doneOpacity: {
     textDecorationLine: "line-through",
     opacity: 0.3,
   },
   btn: {
-    color: "purple",
+    color: "maroon",
     fontSize: 35,
   },
 });
