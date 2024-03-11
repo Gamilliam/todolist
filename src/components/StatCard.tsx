@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     borderRadius: 10,
-    shadowColor: "black",
+    shadowColor: "teal",
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.1,
     shadowRadius: 10,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    color: "grey",
+    color: "teal",
   },
   value: {
     fontSize: 24,

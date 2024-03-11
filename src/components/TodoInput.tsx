@@ -42,9 +42,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 5,
     borderColor: "teal",
-    padding: 8,
+    padding: 10,
     margin: 10,
     width: 250,
+    fontSize: 20,
+    fontStyle: "italic",
+    color: "teal",
   },
   btn: {
     color: "teal",
