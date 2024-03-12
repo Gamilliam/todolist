@@ -16,12 +16,12 @@ export default function TodoEntry({ todo, onDone, onRemove }: TodoProps) {
         value={todo.done}
         onValueChange={() => onDone?.(todo)}
         color="purple"
-        style={todo.done && styles.doneOpacity}
+        style={todo.done && styles.doneText}
       />
-      <Text style={todo.done && styles.doneOpacity}>{todo.text}</Text>
+      <Text style={todo.done && styles.doneText}>{todo.text}</Text>
       <Pressable
         onPress={() => onRemove?.(todo)}
-        style={todo.done && styles.doneOpacity}
+        style={todo.done && styles.doneText}
       >
         <Ionicons name="remove-circle-outline" style={styles.btn} />
       </Pressable>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "grey",
     borderBottomWidth: 1,
   },
-  doneOpacity: {
+  doneText: {
     textDecorationLine: "line-through",
     opacity: 0.3,
   },
