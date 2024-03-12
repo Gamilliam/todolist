@@ -11,9 +11,9 @@ export default function Layout() {
           headerTitle: "ToDoList",
           tabBarLabel: "To-do list",
           headerStyle: styles.layout,
-          headerTitleStyle: styles.layout,
+          headerTitleStyle: styles.layoutText,
           tabBarStyle: styles.layout,
-          tabBarItemStyle: styles.layout,
+          tabBarItemStyle: styles.layoutText,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name="list"
@@ -31,9 +31,9 @@ export default function Layout() {
           headerTitle: "Stats",
           tabBarLabel: "Stats",
           headerStyle: styles.layout,
-          headerTitleStyle: styles.layout,
+          headerTitleStyle: styles.layoutText,
           tabBarStyle: styles.layout,
-          tabBarItemStyle: styles.layout,
+          tabBarItemStyle: styles.layoutText,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name="stats-chart"
@@ -52,11 +52,12 @@ export default function Layout() {
 const styles = StyleSheet.create({
   layout: {
     backgroundColor: "teal",
+  },
+  layoutText: {
+    backgroundColor: "teal",
     fontSize: 24,
     color: "white",
     fontWeight: "bold",
     letterSpacing: 3,
-    paddingBottom: 3,
-    paddingTop: 3,
   },
 });
